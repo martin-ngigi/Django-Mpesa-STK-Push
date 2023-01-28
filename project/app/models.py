@@ -10,5 +10,5 @@ class User(models.Model):
 
     class Meta:
         ordering =('phone',)
-        def __str__(self):
-            return self.phone
+    def __str__(self):
+        return self.phone
