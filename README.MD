@@ -1,9 +1,9 @@
 # Django Mpesa STK push
 ## Links:
--[Youtube Tutorial](https://www.youtube.com/watch?v=CKFu3229p9Q&t=24s&ab_channel=FortuneDevAcademy)
--[Github Source Code](https://github.com/Fortune-dot/Django-STK-Push)
--[Github Daraga](https://github.com/Fortune-dot/django-daraja)
--[Safaricom Daraje](https://developer.safaricom.co.ke/)
+- [Youtube Tutorial](https://www.youtube.com/watch?v=CKFu3229p9Q&t=24s&ab_channel=FortuneDevAcademy)
+- [Github Source Code](https://github.com/Fortune-dot/Django-STK-Push)
+- [Github Daraga](https://github.com/Fortune-dot/django-daraja)
+- [Safaricom Daraje](https://developer.safaricom.co.ke/)
 
 ## 1.SETTING UP 
 - 1 .1 create a virtual environment named .venv based on your current interpreter:
