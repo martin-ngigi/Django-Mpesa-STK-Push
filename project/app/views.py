@@ -1,8 +1,12 @@
 from django.shortcuts import render
+from .models import User
+from .serializers import UserSerializer
+from rest_framework import generics
 
 # Create your views here.
 from django.http import HttpResponse
 from django_daraja.mpesa.core import MpesaClient
+from rest_framework.filters import SearchFilter
 
 def index(request):
     cl = MpesaClient()
@@ -18,4 +22,12 @@ def index(request):
 def stk_push_callback(request):
         data = request.body
         
-        return HttpResponse("STK Push in Django👋")
+        #return HttpResponse("STK Push in Django👋")
+        return HttpResponse(data)
+
+class UsersLists(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    filter_backends =  [SearchFilter]
+    search_fields = ['name', 'phone']
+

@@ -50,6 +50,7 @@
 
 ```
 pip install django_daraja
+pip install django-rest-framework
 ```
 
 - Exporting requirements:
@@ -99,3 +100,50 @@ In the VS Code Terminal where your virtual environment is activated, run the fol
     python manage.py startapp app
 ```
  
+
+ # API
+ ## 1. Using Browser
+-  To make an STK Push using the browser, run the following url in browser:
+
+```
+http://127.0.0.1:8000/
+```
+- If successful, response will be:
+
+```
+{
+  "MerchantRequestID": "119407-226353936-1",
+  "CheckoutRequestID": "ws_CO_28012023102652950797292290",
+  "ResponseCode": "0",
+  "ResponseDescription": "Success. Request accepted for processing",
+  "CustomerMessage": "Success. Request accepted for processing"
+}
+```
+
+<br>
+
+## 2. Using Postman
+1. Create User
+- Endpoint ->  http://127.0.0.1:8000/users
+- request:
+
+```
+{
+    "name": "Martin",
+    "amount": 1,
+    "phone": "0797292290"
+}
+```
+
+- expected response:
+
+```
+{
+    "id": 1,
+    "name": "Martin",
+    "phone": "0797292290",
+    "amount": 1,
+    "created_at": "2023-01-28T08:21:15.716136Z"
+}
+```
+
